@@ -1,0 +1,16 @@
+<!-- app_name/templates/upload_image.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image</title>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Upload">
+    </form>
+    <a href="{% url 'image_list' %}">View Images</a>
+</body>
+</html>
